@@ -27,3 +27,7 @@ app.use(bodyParser.json({ type: '*/*' }));
 app.use(morgan('dev'));
 
 routers(app, io);
+
+app.get('/', (req, res) => {
+  res.send('ok');
+});
